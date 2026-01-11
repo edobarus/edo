@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Edo</title>
+  <meta name="viewport" content="widht=device-widht, initial-scale="1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Alfredo Barus</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <header class="hero">
+    <h1>Alfredo Barus</h1>
+    <p>PORTOFOLIO</p>
+  </header>
+
+  <section class="about reveal">
+  <div class="container">
+    <h2>Tentang</h2>
+    <p>
+      <p>
+Saya adalah mahasiswa yang sedang membangun karier sebagai Web Developer.
+Berangkat dari proses belajar mandiri, saya terbiasa mengerjakan proyek
+secara bertahap dengan fokus pada tampilan, struktur, dan pengalaman pengguna.
+
+Website ini saya bangun sebagai ruang untuk mendokumentasikan proses,
+hasil desain, serta pengembangan website yang saya kerjakan.
+Saya terbuka untuk belajar, berkolaborasi, dan berkembang di lingkungan profesional.
+</p>
+
+    </p>
+  </div>
+</section>
+
+
+  <!--PORTOFOLIO-->
+<section class="portfolio reveal">
+    <div class="container">
+      <h2>Portfolio</h2>
+
+    <div class="portfolio-grid">
+        <div class="card">
+           <img src="assets/portofolio/design1.jpg">
+          <h3>Design Sosial Media</h3>
+          <p>Design Instagram dan poster</p>
+        </div>
+
+  <div class="card">
+    <img src="assets/portofolio/design2.jpg">
+          <h3>UI Aplikasi</h3>
+          <p>Tampilan aplikasi menggunakan Figma</p>
+        </div>
+
+    <div class="card">
+      <img src="assets/portofolio/design3.jpg">
+      <h3>web development</h3>
+      <p>website HTML,CSS,Java Script</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills container">
+  <h2>Keahlian</h2>
+  <p>
+    HTML, CSS, dasar JavaScript, desain UI menggunakan Figma,
+    serta pembuatan website yang responsif dan rapi.
+  </p>
+</section>
+
+
+  <!--CONTACT-->
+
+<section class="contact">
+  <h2>Kontak</h2>
+  <p>
+    Jika tertarik bekerja sama atau ingin mengenal saya lebih jauh,
+    silakan hubungi saya.
+  </p>
+
+   <a href="https://wa.me/62895425538464" class="btn-whatsapp">
+    Hubungi via WhatsApp
+  </a>
+</section>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  function revealOnScroll() {
+    reveals.forEach(reveal => {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveal.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveal.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
+<a href="https://wa.me/62895425538464" 
+   class="wa-float" 
+   target="_blank">
+  💬
+</a>
+
+
+</body>
+<a href="https://wa.me/62XXXXXXXXXX" class="wa-float">💬</a>

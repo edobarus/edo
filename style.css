@@ -1,0 +1,470 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #1a002b 0%,
+    #0a0014 40%,
+    #000000 100%
+  );
+  color: #ffffff;
+}
+
+/*hero / header*/
+.hero{
+    height: 100vh;
+    background: linear-gradient(135deg, #6a00ff, #12002f);
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding:0 24px;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section{
+    margin-bottom: 120px;
+}
+section{
+    padding: 80px 0;
+}
+
+/*NAVBAR*/
+.navbar {
+    position:sticky;
+    top: 0;
+    background: #0a0a0a;
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #a855f7;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color:#a855f7;
+}
+/*CONTAINER GLOBAL*/
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24 px;
+}
+
+/*PORTOFOLIO*/
+.portofolio{
+   font-size: 36px;
+   margin-bottom: 40px;
+}
+
+.portofolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card{
+    background: #111;
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid #222;
+}
+
+.card h3{
+    color:#c084fc;
+    margin-bottom: 12px;
+}
+
+.card p{
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(192,132,252,0.2);
+}
+body{
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset: 0;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(192,132,252,0.12),
+        transparent
+    );
+    opacity: 0;
+    transition:0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+header h1{
+    animation: slideup 1s ease forwards;
+}
+
+@keyframes slideup{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:768px) {
+    header h1{
+        font-size: 36px;
+    }
+    nav-links{
+        gap:16px;
+    }
+    section{
+        padding: 60px 0;
+    }
+}
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    font-size: 14px;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* === PORTFOLIO INTERACTION === */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(160, 90, 255, 0.4);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  color: #a05aff;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #0a0a0a,
+    #12001f
+  );
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #ccc;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* === WHATSAPP BUTTON === */
+.btn-whatsapp {
+  display: inline-block;
+  padding: 16px 36px;
+  background: #25d366;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(37, 211, 102, 0.7);
+}
+
+h1, h2 {
+  text-shadow: 
+    0 0 10px rgba(160, 90, 255, 0.4),
+    0 0 30px rgba(160, 90, 255, 0.2);
+}
+
+.card {
+  background: rgba(20, 10, 40, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(160, 90, 255, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 
+    0 0 40px rgba(160, 90, 255, 0.35),
+    0 0 80px rgba(80, 0, 160, 0.2);
+}
+
+section {
+  padding: 120px 0;
+}
+
+.reveal{
+    opacity:0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.card {
+  background: #111;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(138,43,226,0.35);
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(138,43,226,0.4);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 16px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+}
+
+h1, h2 {
+  letter-spacing: 0.8px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.skills {
+  text-align: center;
+}
+
+.skills p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 100px 20px;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+}
+
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    font-size: 16px;
+  }
+}
